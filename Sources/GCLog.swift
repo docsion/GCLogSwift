@@ -1,6 +1,6 @@
 //
 //  GCLog.swift
-//  GCLogSwift
+//  GCLog
 //
 //  Created by Thinh Nguyen on 06/05/2022.
 //
@@ -9,7 +9,7 @@ import Foundation
 
 /***
  * GC LOG WRITER
- * Console
+ * write(cURL) to any
  ***/
 protocol GcLogWritter {
     func write(content: String)
@@ -23,6 +23,7 @@ class ConsoleLogWriter: GcLogWritter {
 
 /**
  * GC LOG PARSER
+ * parse(any) to cURL string
  **/
 protocol GcLogParser {
     func parse(from: Any?) -> String?;
@@ -73,37 +74,11 @@ extension HttpLogParser {
     }
 }
 
-class URLRequestLogParser: HttpLogParser {
-    func getHeaders(from: Any?) -> [String : String]? {
-        guard let req = from as? URLRequest else { return nil }
-        return req.allHTTPHeaderFields
-    }
-    
-    func getUrl(from: Any?) -> String? {
-        guard let req = from as? URLRequest else { return nil }
-        guard let url =  req.url else { return nil}
-        return url.absoluteString
-    }
-    
-    func getBody(from: Any?) -> String? {
-        guard let req = from as? URLRequest else { return nil }
-        if let data = req.httpBody, let body = String(data: data, encoding: .utf8) {
-            return body
-        }
-        return nil
-    }
-    
-    func getMethod(from: Any?) -> String? {
-        guard let req = from as? URLRequest else { return nil }
-        return req.httpMethod
-    }
-}
-
 /***
  * GC LOG
  * use(writer) to log(any) powered by use(parser)
  ***/
-open class GcLog {
+class GcLog {
     public static let `default` = GcLog()
     
     var writter: GcLogWritter
