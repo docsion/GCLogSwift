@@ -52,8 +52,8 @@
 		CF100CC42824E0DA0010C1C8 = {
 			isa = PBXGroup;
 			children = (
-				CF100CD02824E0DA0010C1C8 /* GCLogSwift */,
-				CF100CDC2824E0DA0010C1C8 /* GCLogSwiftTests */,
+				CF100CD02824E0DA0010C1C8 /* Source */,
+				CF100CDC2824E0DA0010C1C8 /* Tests */,
 				CF100CCF2824E0DA0010C1C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,20 +67,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF100CD02824E0DA0010C1C8 /* GCLogSwift */ = {
+		CF100CD02824E0DA0010C1C8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				CF100CEA2824E1250010C1C8 /* GCLog.swift */,
 			);
-			path = GCLogSwift;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		CF100CDC2824E0DA0010C1C8 /* GCLogSwiftTests */ = {
+		CF100CDC2824E0DA0010C1C8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				CF100CDD2824E0DA0010C1C8 /* GCLogTests.swift */,
 			);
-			path = GCLogSwiftTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
