@@ -32,12 +32,11 @@ class URLRequestLogParserTests: XCTestCase {
         request.httpBody = payload
         
         // Log
-        let gcl = GcLog.default
-        gcl.use(logWritter: StringLogWriter())
-        gcl.use(logParser: URLRequestLogParser())
-        gcl.log(any: request)
+        GCL.use(logWritter: StringLogWriter())
+        GCL.use(logParser: URLRequestLogParser())
+        GCL.log(any: request)
         
-        guard let writter = gcl.writter as? StringLogWriter else {
+        guard let writter = GCL.writter as? StringLogWriter else {
             XCTFail("[Test url request] Writter is not String log writter")
             return
         }

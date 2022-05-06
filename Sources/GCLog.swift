@@ -78,7 +78,10 @@ extension HttpLogParser {
  * GC LOG
  * use(writer) to log(any) powered by use(parser)
  ***/
-class GcLog {
+
+public let GCL = GcLog.default
+
+open class GcLog {
     public static let `default` = GcLog()
     
     var writter: GcLogWritter
