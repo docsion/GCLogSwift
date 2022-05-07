@@ -32,18 +32,16 @@ class URLRequestLogParserTests: XCTestCase {
         request.httpBody = payload
         
         // Log
-        let gcl = GcLog.default
-        gcl.use(logWritter: StringLogWriter())
-        gcl.use(logParser: URLRequestLogParser())
-        gcl.log(any: request)
+        GC.use(logWritter: StringLogWriter())
+        GC.use(logParser: URLRequestLogParser())
+        GC.log(any: request)
         
-        guard let writter = gcl.writter as? StringLogWriter else {
+        guard let writter = GC.writter as? StringLogWriter else {
             XCTFail("[Test url request] Writter is not String log writter")
             return
         }
         
         XCTAssert(writter.board == "https://getcurl.app/#body=Y3VybCAnaHR0cHM6Ly9hcGkubHVjaWR0ZWNoLmFpL3YwL3JlY2VpcHRzJyAtWCBQT1NUIC1IICd4LWFwaS1rZXk6IHlvdXJfYXBpX2tleScgLWQgJ3siZG9jdW1lbnRJZCI6ICJhNTA5MjBlMS0yMTRiLTRjNDYtOTEzNy0yYzAzZjk2YWFkNTYifSc=", "Test url request, actual \(writter.board)")
-
     }
 
 }
