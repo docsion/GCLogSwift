@@ -30,4 +30,4 @@ Log shareable cURL to Developer Console, to Messenging Program (e.g. Telegram, S
 
 
 ## Contact
-https://getcurl.app
+https://getcurl.app/hello
