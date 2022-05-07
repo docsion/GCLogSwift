@@ -7,6 +7,8 @@
 
 import Foundation
 
+public let GC = GcLog.default
+
 /***
  * GC LOG WRITER
  * write(cURL) to any
@@ -78,9 +80,6 @@ extension HttpLogParser {
  * GC LOG
  * use(writer) to log(any) powered by use(parser)
  ***/
-
-public let GCL = GcLog.default
-
 open class GcLog {
     public static let `default` = GcLog()
     
