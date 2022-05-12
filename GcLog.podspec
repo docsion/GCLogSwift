@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'GcLog'
-  s.version = '1.2'
+  s.version = '1.3'
   s.license = 'MIT'
   s.summary = 'Log shareable cURL to Developer Console, to Messenging Program (e.g. Telegram, Slack), and more (https://getcurl.app)'
   s.homepage = 'https://github.com/docsion/GcLogSwift'
