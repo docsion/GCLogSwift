@@ -15,6 +15,8 @@ Log shareable cURL to Developer Console, to Messenging Program (e.g. Telegram, S
 ## Installation
 
 ### Swift Package Manager
+The [Swift Package Manager](https://www.swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
  ```
  dependencies: [
     .package(url: "https://github.com/docsion/GcLogSwift.git", .upToNextMajor(from: "1.0"))
