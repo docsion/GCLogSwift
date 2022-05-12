@@ -26,7 +26,7 @@ Log shareable cURL to Developer Console, to Messenging Program (e.g. Telegram, S
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Swift and Objective-C Cocoa projects. It has over 89 thousand libraries and is used in over 3 million apps. CocoaPods can help you scale your projects elegantly.
 
  ```
-pod 'Alamofire'
+pod 'GcLog'
 ```
 
 
